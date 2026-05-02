@@ -1,4 +1,4 @@
-const BASE = 'http://localhost:3000';
+const BASE = 'https://feedback-kfy8.onrender.com';
 
 let selectedRating = 0;
 let currentSort = 'rating-desc';
