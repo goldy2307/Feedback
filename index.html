@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div class="page-header">
+      <h1>Feedback Form</h1>
+      <p class="subtitle">Help Us Making it More better </p>
+    </div>
+
+    <div class="card" id="form-card">
+      <div class="card-title">Submit Feedback</div>
+
+      <div class="field" id="field-name">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your full name" autocomplete="off" />
+        <div class="error-msg">Name is required.</div>
+      </div>
+
+      <div class="field" id="field-email">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com" autocomplete="off" />
+        <div class="error-msg">Enter a valid email address.</div>
+      </div>
+
+      <div class="field" id="field-rating">
+        <label>Rating</label>
+        <div class="stars" id="star-group">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <div class="star-label" id="star-label">Click to rate</div>
+        <div class="error-msg">Please select a rating.</div>
+      </div>
+
+      <div class="field" id="field-feedback">
+        <label for="feedback">Feedback</label>
+        <textarea id="feedback" placeholder="Share your experience..."></textarea>
+        <div class="error-msg">Feedback cannot be empty.</div>
+      </div>
+
+      <button class="submit-btn" id="submit-btn">
+        <span class="btn-text">Submit Feedback</span>
+        <span class="spinner" id="spinner"></span>
+      </button>
+
+      <div class="success-box" id="success-box">
+        <span class="success-icon">✓</span> Feedback submitted successfully!
+      </div>
+    </div>
+
+    <div class="card" id="analytics-card">
+      <div class="card-title">Analytics</div>
+      <div class="analytics-grid">
+        <div class="stat-box">
+          <div class="stat-number" id="total-count">—</div>
+          <div class="stat-label">Total Feedback</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" id="avg-rating">—</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" id="top-rating">—</div>
+          <div class="stat-label">Highest Rating</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" id="low-rating">—</div>
+          <div class="stat-label">Lowest Rating</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="feedbacks-card">
+      <div class="card-header-row">
+        <div class="card-title">All Feedback</div>
+        <button class="refresh-btn" id="refresh-btn">↻ Refresh</button>
+      </div>
+      <div class="sort-row">
+        <span class="sort-label">Sort by:</span>
+        <button class="sort-btn active" data-sort="rating-desc">Rating ↓</button>
+        <button class="sort-btn" data-sort="rating-asc">Rating ↑</button>
+        <button class="sort-btn" data-sort="newest">Newest</button>
+      </div>
+      <div id="feedbacks-list">
+        <div class="empty-state">No feedback yet.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
