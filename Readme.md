@@ -12,7 +12,7 @@ npm init -y
 npm install express cors
 ### 2. Start the server
 node server.js
-Server runs at: `http://localhost:3000`
+Server runs at: `http://localhost:port`
 ### 3. Open the app
 Open `index.html` in your browser directly (double-click or use Live Server in VS Code).
 ## API Endpoints
